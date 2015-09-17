@@ -1,0 +1,68 @@
+/* Responsive Full Background Image Using CSS
+ * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
+*/
+body {
+	 padding-top: 70px;
+  /* Location of the image */
+  background-image: url(../Img/pepeBG.png);
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+hr
+{
+    border-top-color: black !important;
+}
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(../Img/pepeBG.png);
+  }
+	}
+#pageContainer
+{
+	background-color: #FFFFB2;
+	height: 100%;
+}
+#mainContainer
+{
+	margin-top: 10px;
+	background-color: white;
+	border-radius: 5px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+}
+.jumbotron
+{
+	background: rgba(255, 253, 209, 0.8) !important; 
+	padding: 8px !important;
+}
+p
+{
+  font-family: 'Quattrocento', serif !important;
+}
+#errorMessage
+{
+    color: red;
+    font-weight: bold;
+}
+.pepeImgWrapper
+{
+    width: 500px;
+}
