@@ -3,23 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/EraTemplate.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/About.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Contact.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/index.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Header.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Support.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Footer.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/ApplyMembership.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Constribute.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/css/bootstrap.min.css</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Logic/sendMail.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Functions.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/configL.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/js/custom.js</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/ErrorPage.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/Home.php</file>
-            <file>file:/C:/xampp/htdocs/rarepepe.org/css/custom.css</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/configL.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/generateCurrentNumber.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/EraTemplate.php</file>
         </group>
     </open-files>
 </project-private>

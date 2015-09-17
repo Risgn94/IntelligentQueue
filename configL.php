@@ -1,9 +1,9 @@
 <?php
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rarepepe";
+$servername = "mysql38.unoeuro.com";
+$username = "rarepepe_org";
+$password = "12Darkeldar";
+$dbname = "rarepepe_org_db";
 
 /*$servername = "mysql38.unoeuro.com";
 $username = "rarepepe_org";
