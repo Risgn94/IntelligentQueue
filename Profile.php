@@ -5,8 +5,4 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-?>
-<h1>Constribute</h1>
-<script type="text/javascript">
-            document.getElementById("menuConstribute").className = "active";
-            </script>
+

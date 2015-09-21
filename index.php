@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    if(isset($_GET['i']))
+    if(isset($_GET['page']))
     {
-        $i = $_GET["i"];
+        $page = $_GET["page"];
     }
  else {
-     $i = "";
+     $page = "";
  }
       require_once "Header.php";
     ?>
   <body>
-<!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-bottom ">
-          <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-          <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-          <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-          <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-          <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-    </nav>
+      <nav class="navbar navbar-default navbar-fixed-top ">
+          <div class="container">
+          <a href="#" style="margin-top: 8px;" class="col-xs-1"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p style="font-size: 12px;">Back</p></span></a>
+          <h2 class="col-xs-10" style="text-align: center; margin-top: 10px;">IntelligentQueue</h2>
+          <a href="#" style="margin-top: 12px;" class="col-xs-1"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-align-justify" aria-hidden="true"><p style="font-size: 12px;"></p></span></a>
+          </div>
+      </nav>
 
     <div class="container">
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
           <?php
-        include 'Functions.php';
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        if($i == "" || $i == "Login")
+        if($page == "" || $page == "Login")
         {      
-            include_once("Login.php");
+            include_once("loginMT.php");
         }
-        elseif ($i == "About")
+        elseif ($page == "Home")
         {
-            include_once("About.php");
+            include_once("Home.php");
         }
-        elseif ($i == "Contact")
+        elseif ($page == "Favorites")
         {
-            include_once("Contact.php");
+            include_once("Favorites.php");
         }
-        elseif ($i == "Login")
+        elseif ($page == "Profile")
         {
-            include_once 'Login.php';
+            include_once 'Profile.php';
         }
-        elseif ($i == "Apply")
+        elseif ($page == "Settings")
         {
-            include_once './ApplyMembership.php';
-        }
-        elseif ($i == "Support")
-        {
-            include_once './Support.php';
-        }
-        elseif ($i == "Era")
-        {
-            include_once './EraTemplate.php';
-            getEra($_GET['category']);
+            include_once 'Settings.php';
         }
         else
         {
-            include_once './ErrorPage.php';
+            include_once 'ErrorPage.php';
         }
         ?>    
-      </div>
     </div> <!-- /container -->
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-bottom ">
+          <div style="text-align: center; margin-top: 8px;">
+              <a href="?page=Home" class="col-xs-3"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-home" aria-hidden="true"><p style="font-size: 12px;">Home</p></span></a>
+              <a href="?page=Favorites" class="col-xs-3"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-star" aria-hidden="true"><p style="font-size: 12px;">Favorites</p></span></a>
+              <a href="?page=Profile" class="col-xs-3"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-user" aria-hidden="true"><p style="font-size: 12px;">Profile</p></span></a>
+              <a href="?page=Settings" class="col-xs-3"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-cog" aria-hidden="true"><p style="font-size: 12px;">Settings</p></span></a>
+          </div>
+    </nav>
     <?php
       include_once "Footer.php";
     ?>

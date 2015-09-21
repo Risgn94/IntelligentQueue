@@ -4,7 +4,7 @@
 body {
 	 padding-top: 70px;
   /* Location of the image */
-  background-image: url(../Img/pepeBG.png);
+  background-image: url(../Img/NYBG.jpg);
   
   /* Image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -31,7 +31,7 @@ hr
   body {
     /* The file size of this background image is 93% smaller
      * to improve page load speed on mobile internet connections */
-    background-image: url(../Img/pepeBG.png);
+    background-image: url(../Img/NYBG.jpg);
   }
 	}
 #pageContainer
@@ -47,11 +47,6 @@ hr
 	border-width: 2px;
 	border-style: solid;
 	border-color: black;
-}
-.jumbotron
-{
-	background: rgba(255, 253, 209, 0.8) !important; 
-	padding: 8px !important;
 }
 p
 {
