@@ -13,7 +13,7 @@
   <body>
       <nav class="navbar navbar-default navbar-fixed-top ">
           <div class="container">
-          <a href="#" style="margin-top: 8px;" class="col-xs-1"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p style="font-size: 12px;">Back</p></span></a>
+              <a href="?page=Home" style="margin-top: 8px;" class="col-xs-1"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p style="font-size: 12px;">Back</p></span></a>
           <h2 class="col-xs-10" style="text-align: center; margin-top: 10px;">IntelligentQueue</h2>
           <a href="#" style="margin-top: 12px;" class="col-xs-1"><span style="font-size: 30px; color: white;" class="glyphicon glyphicon-align-justify" aria-hidden="true"><p style="font-size: 12px;"></p></span></a>
           </div>
