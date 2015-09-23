@@ -8,3 +8,7 @@
 ?>
 <h1>404 - Page does not Exist</h1>
 <p>We are sorry but the requested url does not exist. You'll be redirected to our homepage in 10 seconds.</p>
+<script type="text/javascript">
+    setInterval(function () {window.location = "index.php"}, 10000);
+</script>
+    
