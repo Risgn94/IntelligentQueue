@@ -7,3 +7,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-66227903-1', 'auto');
 ga('send', 'pageview');
+
+function currentMenu (menuId)
+{
+    document.getElementById(menuId).style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+}

@@ -10,3 +10,6 @@
     <h1>Settings</h1>
     <p>These are some frezh ass settings yo.</p>
 </div>
+<script>
+    window.onload = (function() {document.getElementById('settingsButton').style.backgroundColor = "rgba(255, 255, 255, 0.3)";} );
+</script>

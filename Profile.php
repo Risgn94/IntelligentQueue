@@ -11,3 +11,6 @@
     <p>Her skal der være en masse personlige oplysninger. Gad vide om det kommer til at virke..</p>
     
 </div>
+<script>
+    window.onload = (function() {document.getElementById('profileButton').style.backgroundColor = "rgba(255, 255, 255, 0.3)";} );
+</script>

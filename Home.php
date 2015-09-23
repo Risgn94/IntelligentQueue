@@ -43,7 +43,7 @@
                   echo "<tr class='active'>";
                   echo "<td>"
                   . "<div class='row'>"
-                  . "<h3 class='col-xs-7'>".$oRow['Name']."<img style='margin-left: 5%' src='Img/OrganizationLogos/".$oRow['ImgLink']."' height='30px' class='img-responsive' alt='Responsive image'></h3><a href='?page=Departments' style='margin-top: 8px;' class='col-xs-offset-2 col-xs-2'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'><p style='font-size: 12px;'>Back</p></span></a><div class='col-xs-1'></div>"
+                  . "<h3 class='col-xs-7'>".$oRow['Name']."<img style='margin-left: 5%' src='Img/OrganizationLogos/".$oRow['ImgLink']."' height='30px' class='img-responsive' alt='Responsive image'></h3><a href='?page=Departments' style='margin-top: 8px;' class='col-xs-offset-2 col-xs-2'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'><p style='font-size: 12px;'></p></span></a><div class='col-xs-1'></div>"
                   . "<p class='col-xs-12'>".$oRow['Address']." ".$oRow['AddressNumber'].", ".$oRow['PostalCode']." ".$oRow['City']."</p>"
                   . "</div>"
                   . "</td>"
@@ -58,6 +58,9 @@
   </div>
 </div>
 <script>
-    var navBar = document.getElementsByClassName("bottom-navbar")[0];
-    navBar.childNode[0].style.backgroundColor = "rgba (255, 255, 255, 0.8)";
+    window.onload = (function() {
+        document.getElementById('homeButton').style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+        var childs = document.getElementById('backButton').childNodes[0];
+        childs.childNodes[0].innerHTML = "Log out";
+    });
 </script>
