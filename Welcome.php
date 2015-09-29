@@ -17,3 +17,9 @@
         <p>Want to have you organization on this app? <a href="#">Follow this link</a></p>
     </div>
 </div>
+<script type="text/javascript">
+    window.onload = function() {
+  //YOUR JQUERY CODE
+  $('.navbar-fixed-bottom').addClass('hidden');
+ }
+</script>

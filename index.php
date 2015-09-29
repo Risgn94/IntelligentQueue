@@ -23,47 +23,40 @@
       <!-- Main component for a primary marketing message or call to action -->
           <?php
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-        if($page == "" || $page == "Login")
-        {      
-            include_once("Welcome.php");
-        }
-        elseif ($page == "Home")
-        {
-            include_once("Home.php");
-        }
-        elseif ($page == "Favorites")
-        {
-            include_once("Favorites.php");
-        }
-        elseif ($page == "Profile")
-        {
-            include_once 'Profile.php';
-        }
-        elseif ($page == "Settings")
-        {
-            include_once 'Settings.php';
-        }
-        elseif ($page == "Login")
-        {
-            include_once 'Login.php';
-        }
-        elseif ($page == "CreateUser")
-        {
-            include_once 'CreateUser.php';
-        }
-        elseif ($page == "Departments")
-        {
-            include_once 'Departments.php';
-        }
-        else
-        {
-            include_once 'ErrorPage.php';
-        }
+        switch ($page) {
+            case "":
+                include_once("Welcome.php");
+                break;
+            case "Login":
+                include_once("Welcome.php");
+                break;
+            case "Home":
+                include_once("Home.php");
+                break;
+            case "Favorites":
+                include_once("Favorites.php");
+                break;
+            case "Profile":
+                include_once("Profile.php");
+                break;
+            case "Settings":
+                include_once("Settings.php");
+                break;
+            case "CreateUser":
+                include_once("CreateUser.php");
+                break;
+            case "Departments":
+                include_once("Departments.php");
+                break;
+            default:
+                include_once 'ErrorPage.php';
+                break;
+            }
         ?>    
     </div> <!-- /container -->
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-bottom ">
-          <div class="bottom-navbar">
+          <div class="bottom-navbar" style="text-align: center;">
               <a href="?page=Home" id="homeButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-home" aria-hidden="true"><p style="font-size: 12px;">Home</p></span></a>
               <a href="?page=Favorites" id="favoButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-star" aria-hidden="true"><p style="font-size: 12px;">Favorites</p></span></a>
               <a href="?page=Profile" id="profileButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-user" aria-hidden="true"><p style="font-size: 12px;">Profile</p></span></a>

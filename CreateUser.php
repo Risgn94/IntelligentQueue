@@ -55,3 +55,9 @@
 <?php
 
 ?>
+<script type="text/javascript">
+    window.onload = function() {
+  //YOUR JQUERY CODE
+  $('.navbar-fixed-bottom').addClass('hidden');
+ }
+</script>

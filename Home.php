@@ -43,8 +43,7 @@
                   echo "<tr class='active'>";
                   echo "<td>"
                   . "<div class='row'>"
-                  . "<h3 class='col-xs-7'>".$oRow['Name']."<img style='margin-left: 5%' src='Img/OrganizationLogos/".$oRow['ImgLink']."' height='30px' class='img-responsive' alt='Responsive image'></h3><a href='?page=Departments' style='margin-top: 8px;' class='col-xs-offset-2 col-xs-2'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'><p style='font-size: 12px;'></p></span></a><div class='col-xs-1'></div>"
-                  . "<p class='col-xs-12'>".$oRow['Address']." ".$oRow['AddressNumber'].", ".$oRow['PostalCode']." ".$oRow['City']."</p>"
+                  . "<h3 class='col-xs-7'>".$oRow['Name']."<img style='margin-left: 5%' src='Img/OrganizationLogos/".$oRow['ImgLink']."' height='30px' class='img-responsive' alt='Responsive image'></h3><a href='?page=Departments&Organization=".$oRow['Name']."' style='margin-top: 8px;' class='col-xs-offset-2 col-xs-2'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'><p style='font-size: 12px;'></p></span></a><div class='col-xs-1'></div>"
                   . "</div>"
                   . "</td>"
                   . "</tr>";
@@ -60,7 +59,12 @@
 <script>
     window.onload = (function() {
         document.getElementById('homeButton').style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+        document.getElementById('backButton').href = "?page=Login"
         var childs = document.getElementById('backButton').childNodes[0];
+        childs.className = "";
         childs.childNodes[0].innerHTML = "Log out";
+        childs.childNodes[0].style.fontSize = "16px";
+        childs.childNodes[0].style.lineHeight = "21px";
+        childs.childNodes[0].style.fontWeight = "bold";
     });
 </script>
