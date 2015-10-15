@@ -62,3 +62,33 @@ p
     text-align: center;
     padding-top: 8px;
 }
+
+#loginError
+{
+    color: red;
+}
+.google_wrapper{
+        position: relative;
+	margin-bottom: 15px;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+        width: 100%
+    }
+    .google_wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+	
+	.tableVisibility
+	{
+		padding: 5px;
+		padding-bottom: 0px;
+		border-radius: 5px;
+		background-color: white;
+		opacity: 0.95;
+		margin-bottom: 10px;
+	}

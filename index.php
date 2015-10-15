@@ -1,6 +1,16 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    else
+    {
+        //Do Nothing
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <?php
+    
     if(isset($_GET['page']))
     {
         $page = $_GET["page"];
@@ -27,6 +37,9 @@
             case "":
                 include_once("Welcome.php");
                 break;
+            case "Welcome":
+                include_once("Welcome.php");
+                break;
             case "Login":
                 include_once("Welcome.php");
                 break;
@@ -34,19 +47,34 @@
                 include_once("Home.php");
                 break;
             case "Favorites":
-                include_once("Favorites.php");
+                if (isset($_SESSION['user'])) {
+                    include_once("Favorites.php");
+                } else {
+                    include_once("ProfileAnon.php");
+                }
                 break;
             case "Profile":
-                include_once("Profile.php");
+                if (isset($_SESSION['user'])) {
+                    include_once("Profile.php");
+                } else {
+                    include_once("ProfileAnon.php");
+                }
                 break;
             case "Settings":
-                include_once("Settings.php");
+                if (isset($_SESSION['user'])) {
+                    include_once("Settings.php");
+                } else {
+                    include_once("ProfileAnon.php");
+                }
                 break;
             case "CreateUser":
                 include_once("CreateUser.php");
                 break;
             case "Departments":
                 include_once("Departments.php");
+                break;
+            case "departmentPage":
+                include_once("departmentPage.php");
                 break;
             default:
                 include_once 'ErrorPage.php';

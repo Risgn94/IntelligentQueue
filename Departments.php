@@ -1,15 +1,18 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-include './configL.php';
-$organization = $_GET["Organization"];
+<div class="bs-example" style="margin-bottom: 60px;" data-example-id="contextual-table">
+    <table class="table table table-hover">
+      <thead>
+        <tr>
+            <th><h2>Departments</h2></th>
+        </tr>
+      </thead>
+      <tbody>
+          <?php
+          include './configL.php';
+          $organization = stripcslashes($_GET["Organization"]);
           $conn;
+          
           //Get the name from URL, and find the organization id by the name. We really need some sort of database Structure.
-          $organizationData = "SELECT DepartmentName, Street, StreetNumber, City, PostalCode FROM Departments where DepartmentName = ".$organization." ORDER BY Name ASC;";
+          $organizationData = "SELECT ID, DepartmentName, Street, StreetNumber, City, PostalCode FROM Departments where OrganizationID = " . $organization . " ORDER BY DepartmentName ASC;";
           $organizationsResult = $conn->query($organizationData);
           if ($organizationsResult->num_rows > 0) {
               // output data of each row
@@ -17,8 +20,10 @@ $organization = $_GET["Organization"];
                   echo "<tr class='active'>";
                   echo "<td>"
                   . "<div class='row'>"
-                  . "<h3 class='col-xs-10'>".$oRow['DepartmentName']."</h3><a href='#' style='margin-top: 8px;' class='col-xs-offset-2 col-xs-2'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'><p style='font-size: 12px;'></p></span></a><div class='col-xs-2'></div>"
-                  ."<p class='col-xs-12'>".$oRow['Street']." ".$oRow['StreetNumber'].", ".$oRow['City']."".$oRow['PostalCode']."</p>"
+                  . "<h3 class='col-xs-8'>" . $oRow['DepartmentName'] . "</h3>"
+                          . "<a href='?page=departmentPage&department=".$oRow['ID']."' style='margin-top: 12px;' class='col-xs-4'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'>"
+                          . "<p style='font-size: 12px;'></p></span></a>"
+                          . "<p class='col-xs-12'>" . $oRow['Street'] . " " . $oRow['StreetNumber'] . ", " . $oRow['City'] . " " . $oRow['PostalCode'] . "</p>"
                   . "</div>"
                   . "</td>"
                   . "</tr>";
@@ -26,7 +31,11 @@ $organization = $_GET["Organization"];
           } else {
               echo "No Pepes has yet been added to this category... :(";
           }
-?>
+          ?>
+      </tbody>
+    </table>
+  </div>
+
 <script type="text/javascript">
     window.onload = (
             function() 
