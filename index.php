@@ -32,7 +32,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="container">
       <!-- Main component for a primary marketing message or call to action -->
           <?php
-        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+      
         switch ($page) {
             case "":
                 include_once("Welcome.php");
@@ -53,6 +53,9 @@ if (session_status() == PHP_SESSION_NONE) {
                     include_once("ProfileAnon.php");
                 }
                 break;
+            case "OpeningHours":
+                  include_once("OpeningHours.php");
+                  break;
             case "Profile":
                 if (isset($_SESSION['user'])) {
                     include_once("Profile.php");
