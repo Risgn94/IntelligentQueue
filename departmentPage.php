@@ -48,9 +48,9 @@ header('X-Frame-Options: GOFORIT');
     <h3 id="address"><?php echo $depInfo['Street']. " " . $depInfo['StreetNumber'] . ", " . $depInfo['PostalCode'] . " " . $depInfo['City']; ?></h3><br>
     <?php
         
-        function printIcon($class, $name)
+        function printIcon($class, $name, $link, $ID)
         {
-            echo '<a href="#"><div style="text-align: center;"class="col-xs-4">
+            echo '<a href="?page='.$link.'&department='.$ID.'"><div style="text-align: center;"class="col-xs-4">
                             <span style="height: auto; width: auto; font-size: 50px;" class="'.$class.'"></span><br>
                             <p>'.$name.'</p>
                         </div></a>';
@@ -58,6 +58,7 @@ header('X-Frame-Options: GOFORIT');
         
         $classArray = array("glyphicon glyphicon-transfer", "glyphicon glyphicon-comment", "glyphicon glyphicon-calendar", "glyphicon glyphicon-user");
         $nameArray = array("Queue", "Livechat", "Opening Hours", "Booking");
+        $linkArray = array("QueuePage", "Livechat", "OpeningHours", "BookingPage");
         $plugInArray = array($depInfo['QueueActive'], $depInfo['LivechatActive'], $depInfo['OpeningHoursActive'], $depInfo['BookingActive']);
     ?>
         <div class="row" style="height: 100px;">
@@ -67,14 +68,14 @@ header('X-Frame-Options: GOFORIT');
         {
             if($counterBolean<3)
             {
-                printIcon($classArray[$i], $nameArray[$i]);
+                printIcon($classArray[$i], $nameArray[$i],$linkArray[$i], $depInfo['ID']);
                 $counterBolean++;
             }
             else
             {
                 echo '</div><br>';
                 echo '<div class="row" style="height: 100px;">';
-                printIcon($classArray[$i], $nameArray[$i]);
+                printIcon($classArray[$i], $nameArray[$i],$linkArray[$i], $depInfo['ID']);
             }
         }
         echo '</div><br>';
@@ -91,11 +92,26 @@ header('X-Frame-Options: GOFORIT');
         <div class="row" style="margin: 5px;">
         <div class="google_wrapper">
             <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d18006.657359722474!2d12.546054151049253!3d55.65712796433043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d55.652671899999994!2d12.5207945!4m5!1s0x4652534b9386120b%3A0x46d5d4830eab67bd!2s%C3%85landsgade+45%2C+2300+K%C3%B8benhavn+S%2C+Danmark!3m2!1d55.662371!2d12.607132!5e0!3m2!1sen!2sdk!4v1444658795386" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>  
+        </div>
+            <p id="currentPosition"></p>
     </div>
         
 <iframe id="map" width="600" height="450"></iframe>
 <script  type="text/javascript">
+    
+    var x = document.getElementById("currentPosition");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = position.coords.latitude +"," + position.coords.longitude; 
+}
+    
+    
     var currentLatitude;
     var currentLongitude;
     
