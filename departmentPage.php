@@ -58,7 +58,7 @@ header('X-Frame-Options: GOFORIT');
         
         $classArray = array("glyphicon glyphicon-transfer", "glyphicon glyphicon-comment", "glyphicon glyphicon-calendar", "glyphicon glyphicon-user");
         $nameArray = array("Queue", "Livechat", "Opening Hours", "Booking");
-        $linkArray = array("QueuePage", "Livechat", "OpeningHours", "BookingPage");
+        $linkArray = array("queueFunction", "Livechat", "OpeningHours", "BookingPage");
         $plugInArray = array($depInfo['QueueActive'], $depInfo['LivechatActive'], $depInfo['OpeningHoursActive'], $depInfo['BookingActive']);
     ?>
         <div class="row" style="height: 100px;">

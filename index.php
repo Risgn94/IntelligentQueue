@@ -79,6 +79,9 @@ if (session_status() == PHP_SESSION_NONE) {
             case "departmentPage":
                 include_once("departmentPage.php");
                 break;
+            case "queueFunction":
+              include_once("queuePage.php");
+                break;
             default:
                 include_once 'ErrorPage.php';
                 break;
