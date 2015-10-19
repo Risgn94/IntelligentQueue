@@ -14,4 +14,4 @@ $(document).ready(function() {
         }
         updateDiv();
         setInterval(updateDiv, 10000);
-    }); 
+    });
