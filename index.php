@@ -82,6 +82,9 @@ if (session_status() == PHP_SESSION_NONE) {
             case "queueFunction":
               include_once("queuePage.php");
                 break;
+            case "getWaitingNumbers":
+              include_once("./Json/getWaitingNumbers.php");
+                break;
             default:
                 include_once 'ErrorPage.php';
                 break;

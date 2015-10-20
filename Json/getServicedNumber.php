@@ -1,9 +1,9 @@
 <?php
 
-
+$department = stripcslashes($_GET["Department"]);
 include "../configL.php";
 global $conn;
-$numberData = "SELECT * FROM ServiceDisplay where DepartmentId ='1';";
+$numberData = "SELECT * FROM ServiceDisplay where DepartmentId ='".$department."' ORDER BY CurrentServiced ASC ;";
 $numberResult = $conn->query($numberData);
 
 $arr = array();

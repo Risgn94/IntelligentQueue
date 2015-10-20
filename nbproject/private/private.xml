@@ -5,27 +5,32 @@
         <group>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Home.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/pluginLogic/openingHours.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/queuePage.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/generateCurrentNumber.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Favorites.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/OpeningHours.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/clearSessions.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/departmentPage.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/js/custom.js</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Configuration/ConfigFile.json</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/getWaitingNumbers.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/index.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/getServicedNumber.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/sendMail.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Profile.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/_CreateUser.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Departments.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/generateCurrentNumber.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Favorites.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/js/bootstrap.min.js</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Welcome.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/js/NumberLogic.js</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/clearSessions.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/ErrorPage.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/departmentPage.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/CreateUser.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.css</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/css/custom.css</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/configL.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/js/custom.js</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Configuration/ConfigFile.json</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.js</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Header.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/ProfileAnon.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/index.php</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/sendMail.php</file>
         </group>
     </open-files>
 </project-private>

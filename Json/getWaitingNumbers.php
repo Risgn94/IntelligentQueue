@@ -1,15 +1,15 @@
 <?php
 
+$department = stripcslashes($_GET["Department"]);
 include "../configL.php";
 global $conn;
-$numberData = "SELECT * FROM WaitingNumbers where DepartmentId ='1';";
+$numberData = "SELECT * FROM WaitingNumbers where DepartmentId ='".$department."' ORDER BY WaitNr ASC;";
 $numberResult = $conn->query($numberData);
 
 $arr = array();
 
 
     //fetch table rows from mysql db
-    $sql = "select * from tbl_employee";
     $result = mysqli_query($conn, $numberData) or die("Error in Selecting " . mysqli_error($conn));
 
     //create an array
@@ -20,6 +20,9 @@ $arr = array();
     }
 
     echo json_encode($emparray);
-?>
-
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
