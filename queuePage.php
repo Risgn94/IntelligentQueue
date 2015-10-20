@@ -4,10 +4,12 @@
 
 </script>
 
-<div class="icon-preview"><i class="mdi-image-timer"></i><span>mdi-image-timer</span></div>
+<div class="icon-preview"><i class="mdi-image-timer"></i></div>
                    
 
-<h1>Queue progress </h1>
+<h1><center>Queue progress</center> </h1>
+<br>
+<br>
 
 <div class="progress progress-striped">
     <div class="progress-bar progress-bar-success" style="width: 50%"></div>
