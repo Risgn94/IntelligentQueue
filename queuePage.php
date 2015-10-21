@@ -1,12 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Service Desk 1 Currently Serving:</h3>
+    </div>
+    <div class="panel-body">
+        <h2>1</h2>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Service Desk 2 Currently Serving:</h3>
+    </div>
+    <div class="panel-body">
+        <h2>2</h2>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Service Desk 3 Currently Serving:</h3>
+    </div>
+    <div class="panel-body">
+        <h2>3</h2>
+    </div>
+</div>
 
-<script type="text/javascript">
-
-
-</script>
-
-<div class="icon-preview"><i class="mdi-image-timer"></i></div>
+<a href="#" class="btn btn-primary btn-lg active" style="font-size: 25px; border-radius: 5px; width: 100%; height: 100px; line-height: 84px;" role="button">Pick A Number</a>
                    
-
 <h1><center>Queue progress</center> </h1>
 <br>
 <br>
@@ -18,7 +36,8 @@
     <h3 class="col-xs-6" id="numberDisplay"></h3>
     <h3 class="col-xs-6" id="serviceDisplay"></h3>
 </div>
-<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+
+</div>
 <script>
     function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
