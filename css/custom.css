@@ -104,4 +104,13 @@ p
     font-weight: bold;
     text-align: center;
     margin: 0px;
+}	
+.tableVisibility
+{
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.95;
+    margin-bottom: 10px;
 }

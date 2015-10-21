@@ -37,8 +37,8 @@ if (session_status() == PHP_SESSION_NONE) {
             case "":
                 include_once("Welcome.php");
                 break;
-            case "Booking":
-                include_once("bookingTime");
+            case "BookingPage":
+                include_once("bookingTime.php");
                 break;
             case "Welcome":
                 include_once("Welcome.php");
