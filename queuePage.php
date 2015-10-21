@@ -14,13 +14,12 @@
 <div class="progress progress-striped">
     <div class="progress-bar progress-bar-success" style="width: 50%"></div>
 </div>
-
-<h3 id="numberDisplay" > </h3>
+<div class="row">
+    <h3 class="col-xs-6" id="numberDisplay"></h3>
+    <h3 class="col-xs-6" id="serviceDisplay"></h3>
+</div>
+<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
 <script>
-    var waitingData;
-    var globalCounter = 0;
-    var restCounter = 0;
-    
     function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -48,9 +47,23 @@ var departmentId = getParameterByName('department');
 };
  
  $(document).ready(function() {
-     function doSomething(param)
+     
+     waitingArray = ["ID", "DepartmentId", "WaitNr", "UserID"];
+     serviceArray = ["ID", "DepartmentId", "CurrentServiced", "RegisterNr"];
+     
+     function doSomething(param, elementID, nameArray)
      {
-         document.getElementById('numberDisplay').innerHTML = param;
+         for(i = 0 ; i<param.length ; i++)
+         {
+             var formerText = document.getElementById(elementID).innerHTML;
+             document.getElementById(elementID).innerHTML = formerText+"<br>";
+             
+             for(j = 0 ; j<ObjectLength(param[i]) ; j++)
+             {
+                var formerText = document.getElementById(elementID).innerHTML;
+                document.getElementById(elementID).innerHTML = formerText+param[i][nameArray[j]]+", ";
+             }
+         }
      }
         function getQueuees(innerDepartmentID){
             $.ajax({
@@ -58,43 +71,22 @@ var departmentId = getParameterByName('department');
                 dataType: "json",
                 cache: false,
                 success: function(data) {                  
-                    console.log("Vi kører!");
-                    console.log(data);
-                    console.log(data.length);
-                    console.log(ObjectLength(data[0]));
-                    document.getElementById("numberDisplay").innerHTML = "Hello";
-                    
-                    console.log(data[0]["ID"].thumbnail_large);
-                    thumb_url = data[0].thumbnail_large;
-                    //returnData = data[0]["ID"];
-                    
-                    doSomething(data[0]["ID"]);
-                    
-                    /*
-                    console.log(data);
-                    if(document.getElementById('numberDisplay').innerHTML == data[0][currentServed])
-                    {
-                        //Do nothing
-                    }
-                    else
-                    {
-                      temp = data[0][currentServed] - document.getElementById('numberDisplay').innerHTML;
-                      restCounter=+temp;
-                        document.getElementById('numberDisplay').innerHTML = data[0][currentServed];
-                        document.getElementsByClassName('progress-bar progress-bar-success')[0].style.width = CalculateWaitingTime(2, 5);
-                        
-                    }
-                    document.getElementById('numberDisplay').innerHTML = 'Current number being serviced: ' + data[0];
-                    */
-                    //$('#trade_pp').html(data.trade);
-                    //$('#ect_pp').html(data.ect);
+                    doSomething(data, "numberDisplay", waitingArray);
                 }             
             });
-            //return  this.data;
+        }
+        function getServicee(innerDepartmentID){
+            $.ajax({
+                url: "json/jsonData.php?data=getServicedNumber&Department="+innerDepartmentID,
+                dataType: "json",
+                cache: false,
+                success: function(data) {                  
+                    doSomething(data, "serviceDisplay", serviceArray);
+                }             
+            });
         }
         getQueuees(departmentId);
-        //setInterval(updateDiv, 10000);
-        //document.getElementById("numberDisplay").innerHTML = getQueuees(departmentId)[0]["ID"];
+        getServicee(departmentId);
     });
     
      </script>

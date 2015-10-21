@@ -14,6 +14,7 @@
             <file>file:/C:/xampp/htdocs/IntelligentQueue/js/custom.js</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Configuration/ConfigFile.json</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/getWaitingNumbers.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/jsonData.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/index.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/getServicedNumber.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Logic/sendMail.php</file>
@@ -26,6 +27,7 @@
             <file>file:/C:/xampp/htdocs/IntelligentQueue/ErrorPage.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/CreateUser.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.css</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/updateWaitingLine.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/css/custom.css</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/configL.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.js</file>
