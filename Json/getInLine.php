@@ -17,8 +17,8 @@ $NNFinal = $NN+1;
 $updateRow = "INSERT INTO WaitingNumbers (DepartmentId, WaitNr, UserID) VALUES ('".$dep."', '".$NNFinal."', '".$userID."')";
 
 if($conn->query($updateRow) === TRUE) {
-    echo "Record updated successfully";
+    echo json_encode($NNFinal);
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo json_encode("Error updating record: " . $conn->error);
 }
 ?>

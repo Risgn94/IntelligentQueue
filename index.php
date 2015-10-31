@@ -1,5 +1,5 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
+if (session_status() == PHP_SESSION_NONE || session_id() == '') {
         session_start();
     }
     else
@@ -50,7 +50,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 include_once("Home.php");
                 break;
             case "Favorites":
-                if (isset($_SESSION['user'])) {
+                if (isset($_SESSION['user']) && $_SESSION['user'] != "") {
                     include_once("Favorites.php");
                 } else {
                     include_once("ProfileAnon.php");
@@ -60,14 +60,14 @@ if (session_status() == PHP_SESSION_NONE) {
                   include_once("OpeningHours.php");
                   break;
             case "Profile":
-                if (isset($_SESSION['user'])) {
+                if (isset($_SESSION['user']) && $_SESSION['user'] != "") {
                     include_once("Profile.php");
                 } else {
                     include_once("ProfileAnon.php");
                 }
                 break;
             case "Settings":
-                if (isset($_SESSION['user'])) {
+                if (isset($_SESSION['user']) && $_SESSION['user'] != "") {
                     include_once("Settings.php");
                 } else {
                     include_once("ProfileAnon.php");

@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Home.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/pluginLogic/openingHours.php</file>
+            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/getInLine.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/queuePage.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/generateCurrentNumber.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/Favorites.php</file>
@@ -27,7 +28,6 @@
             <file>file:/C:/xampp/htdocs/IntelligentQueue/ErrorPage.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/CreateUser.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.css</file>
-            <file>file:/C:/xampp/htdocs/IntelligentQueue/Json/updateWaitingLine.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/css/custom.css</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/configL.php</file>
             <file>file:/C:/xampp/htdocs/IntelligentQueue/gmaps.js</file>

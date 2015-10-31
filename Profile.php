@@ -64,11 +64,6 @@ $query = "SELECT * from UserData WHERE Email='".$_SESSION['user']."';";
     </fieldset>
 </form>
 </div>
-
-
-
-
-
 <script>
     window.onload = (function() {document.getElementById('profileButton').style.backgroundColor = "rgba(255, 255, 255, 0.3)";} );
 </script>
