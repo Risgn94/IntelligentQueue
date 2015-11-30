@@ -2,15 +2,23 @@
     <table class="table table table-hover">
       <thead>
         <tr>
-            <th><h2>Departments</h2></th>
+            <th><h2>Departments</h2>
+            <?php
+              include './configL.php';
+              $organization = stripcslashes($_GET["Organization"]);
+              $conn;
+              //Get the organization name and icon image path
+              $orgNameIcon = "SELECT Name, ImgLink FROM Organizations WHERE ID = " . $organization . ";";
+              $orgNameIconResult = $conn->query($orgNameIcon);
+              $orgNI = $orgNameIconResult->fetch_assoc();
+                    //"<h3 class='col-xs-7'>Post DK<img style='margin-left: 5%' src='Img/OrganizationLogos/imageLink.png' height='30px' class='img-responsive' alt='Responsive image'></h3>"
+              echo '<h3 class="col-xs-12 organizationName">'.$orgNI['Name'].'<img style="margin-left: 5%;" src=Img/OrganizationLogos/'.$orgNI['ImgLink'].' height="30px" class="img-responsive" alt="Responsive image"><h3/>';
+            ?>
+            </th>
         </tr>
       </thead>
       <tbody>
           <?php
-          include './configL.php';
-          $organization = stripcslashes($_GET["Organization"]);
-          $conn;
-          
           //Get the name from URL, and find the organization id by the name. We really need some sort of database Structure.
           $organizationData = "SELECT ID, DepartmentName, Street, StreetNumber, City, PostalCode FROM Departments where OrganizationID = " . $organization . " ORDER BY DepartmentName ASC;";
           $organizationsResult = $conn->query($organizationData);

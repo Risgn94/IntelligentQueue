@@ -43,6 +43,9 @@ if (session_status() == PHP_SESSION_NONE || session_id() == '') {
             case "Welcome":
                 include_once("Welcome.php");
                 break;
+            case "ChatPage":
+                include_once("ChatPage.php");
+                break;
             case "Login":
                 include_once("Welcome.php");
                 break;
@@ -97,10 +100,10 @@ if (session_status() == PHP_SESSION_NONE || session_id() == '') {
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-bottom ">
           <div class="bottom-navbar" style="text-align: center;">
-              <a href="?page=Home" id="homeButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-home" aria-hidden="true"><p style="font-size: 12px;">Home</p></span></a>
-              <a href="?page=Favorites" id="favoButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-star" aria-hidden="true"><p style="font-size: 12px;">Favorites</p></span></a>
-              <a href="?page=Profile" id="profileButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-user" aria-hidden="true"><p style="font-size: 12px;">Profile</p></span></a>
-              <a href="?page=Settings" id="settingsButton" class="col-xs-3"><span style="font-size: 28px; color: white;" class="glyphicon glyphicon-cog" aria-hidden="true"><p style="font-size: 12px;">Settings</p></span></a>
+              <a href="?page=Home" id="homeButton" class="col-xs-3"><span class="navBarIcon glyphicon glyphicon-home" ><p>Home</p></span></a>
+              <a href="?page=Favorites" id="favoButton" class="col-xs-3"><span class="navBarIcon glyphicon glyphicon-star" ><p>Favorites</p></span></a>
+              <a href="?page=Profile" id="profileButton" class="col-xs-3"><span class="navBarIcon glyphicon glyphicon-user" ><p>Profile</p></span></a>
+              <a href="?page=Settings" id="settingsButton" class="col-xs-3"><span class="navBarIcon glyphicon glyphicon-cog" ><p>Settings</p></span></a>
           </div>
     </nav>
     <?php

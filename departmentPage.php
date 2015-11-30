@@ -1,18 +1,5 @@
 <?php
 header('X-Frame-Options: GOFORIT'); 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-
-          
-          
-          
-          
-          //Get the name from URL, and find the organization id by the name. We really need some sort of database Structure.
-          
-          $organizationsResult = $conn->query($organizationData);
-           */
     ?>
 <div class="jumbotron" style="margin-bottom: 70px;">
     <?php
@@ -23,26 +10,6 @@ header('X-Frame-Options: GOFORIT');
         $departmentResult = $conn->query($departmentData);
         
         $depInfo = $departmentResult->fetch_assoc();
-        
-       /* if ($departmentResult->num_rows > 0) {
-              // output data of each row
-            
-            
-              while ($oRow = $organizationsResult->fetch_assoc()) {
-                  echo "<tr class='active'>";
-                  echo "<td>"
-                  . "<div class='row'>"
-                  . "<h3 class='col-xs-8'>" . $oRow['DepartmentName'] . "</h3>"
-                          . "<a href='?page=departmentPage&department=".$oRow['ID']."' style='margin-top: 12px;' class='col-xs-4'><span style='font-size: 30px; color: black;' class='glyphicon glyphicon-chevron-right' aria-hidden='true'>"
-                          . "<p style='font-size: 12px;'></p></span></a>"
-                          . "<p class='col-xs-12'>" . $oRow['Street'] . " " . $oRow['StreetNumber'] . ", " . $oRow['City'] . " " . $oRow['PostalCode'] . "</p>"
-                  . "</div>"
-                  . "</td>"
-                  . "</tr>";
-              }
-          } else {
-              echo "This Department has no plugins, or does not exist.";
-          }*/
         ?>
     <h1><?php echo $depInfo['DepartmentName']; ?></h1>
     <h3 id="address"><?php echo $depInfo['Street']. " " . $depInfo['StreetNumber'] . ", " . $depInfo['PostalCode'] . " " . $depInfo['City']; ?></h3><br>
@@ -51,14 +18,14 @@ header('X-Frame-Options: GOFORIT');
         function printIcon($class, $name, $link, $ID)
         {
             echo '<a href="?page='.$link.'&department='.$ID.'"><div style="text-align: center;"class="col-xs-4">
-                            <span style="height: auto; width: auto; font-size: 50px;" class="'.$class.'"></span><br>
-                            <p>'.$name.'</p>
+                            <span style="height: auto; width: auto; font-size: 40px;" class="'.$class.'"></span><br>
+                            <p style="font-size: 18px;">'.$name.'</p>
                         </div></a>';
         }
         
         $classArray = array("glyphicon glyphicon-transfer", "glyphicon glyphicon-comment", "glyphicon glyphicon-calendar", "glyphicon glyphicon-user");
         $nameArray = array("Queue", "Livechat", "Opening Hours", "Booking");
-        $linkArray = array("queueFunction", "Livechat", "OpeningHours", "BookingPage");
+        $linkArray = array("queueFunction", "ChatPage", "OpeningHours", "BookingPage");
         $plugInArray = array($depInfo['QueueActive'], $depInfo['LivechatActive'], $depInfo['OpeningHoursActive'], $depInfo['BookingActive']);
     ?>
         <div class="row" style="height: 100px;">
@@ -73,12 +40,12 @@ header('X-Frame-Options: GOFORIT');
             }
             else
             {
-                echo '</div><br>';
+                echo '</div>';
                 echo '<div class="row" style="height: 100px;">';
                 printIcon($classArray[$i], $nameArray[$i],$linkArray[$i], $depInfo['ID']);
             }
         }
-        echo '</div><br>';
+        echo '</div>';
         
     if($depInfo['LocationActive'] == 1)
     {

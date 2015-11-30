@@ -122,3 +122,18 @@ p
     height: 100px;
     line-height: 84px;
 }
+.navBarIcon
+{
+    font-size: 28px;
+    color: white;
+}
+.navBarIcon p
+{
+    font-size: 12px;
+}
+.organizationName
+{
+    padding-left: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

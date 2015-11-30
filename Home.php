@@ -16,14 +16,6 @@
         Do you also like cars? Click here, and buy the new Audi
     </div>
 </div>
-    <div class="panel panel-warning">
-    <div class="panel-heading">
-        <h3 class="panel-title">Do you like pizza?</h3>
-    </div>
-    <div class="panel-body">
-        We deliver the best pizzas right to your doorstep. Order now!
-    </div>
-</div>
 <div class="bs-example" style="margin-bottom: 60px;" data-example-id="contextual-table">
     <table class="table table table-hover">
       <thead>
